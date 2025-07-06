@@ -1,0 +1,25 @@
+# Definição dos serviços (contêineres)
+services:
+  # Serviço da sua aplicação Python
+  app:
+    build: .   # Constrói a imagem a partir do Dockerfile no diretório atual (.)
+    # container_name: minha_app_python # Nome do container sugerido
+    container_name: api-gestao-escolar # Nome do container ajustado...
+
+    # Mapeia a porta 8000 do contêiner para a porta 8000 da sua máquina
+    ports:
+      - "8000:8000" # Mapeia a porta 8000 do host para a porta 8000 do contêiner
+
+    # Qualquer alteração no seu código será refletida imediatamente no contêiner.
+    volumes:
+      - .:/app   # Monta o diretório atual(onde está seu código) em/app dentro do contêiner para que o "hot-reload" do Uvicorn funcione.
+   
+
+   #Sugestões opcionais
+   # env_file:
+   #   - .env  # (Opcional) Carrega variáveis de ambiente de um arquivo .env
+
+# (Opcional, mas boa prática) Define uma rede para o serviço
+#networks:
+#  default:
+

@@ -15,7 +15,11 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 
 2. **Crie um ambiente virtual:**
    ```sh
-   python3 -m venv ./venv
+   python3 -m venv ./venv 
+   ```
+2. **caso tiver outra versão do pythin use este para criar um ambiente virtual:**
+   ```sh
+   python -m venv ./venv 
    ```
 
 3. **Ative o ambiente virtual:**
